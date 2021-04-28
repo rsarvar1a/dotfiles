@@ -1,0 +1,107 @@
+let SessionLoad = 1
+let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
+let v:this_session=expand("<sfile>:p")
+silent only
+silent tabonly
+cd ~/uWaterloo/2B/CS241/Assignments/A7/p1
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+badd +1 ~/uWaterloo/2B/CS241/Assignments/A7/p1/wlp4gen.cc
+badd +37 ~/uWaterloo/2B/CS241/Assignments/A4/p9/traverse.cc
+badd +0 ~/uWaterloo/2B/CS241/Assignments/A5/p8/galaxy.cc
+argglobal
+%argdel
+edit ~/uWaterloo/2B/CS241/Assignments/A7/p1/wlp4gen.cc
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+wincmd _ | wincmd |
+vsplit
+2wincmd h
+wincmd w
+wincmd w
+set nosplitbelow
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe 'vert 1resize ' . ((&columns * 153 + 173) / 347)
+exe 'vert 2resize ' . ((&columns * 152 + 173) / 347)
+exe 'vert 3resize ' . ((&columns * 40 + 173) / 347)
+argglobal
+balt ~/uWaterloo/2B/CS241/Assignments/A5/p8/galaxy.cc
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 100 - ((48 * winheight(0) + 43) / 86)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 100
+normal! 0
+wincmd w
+argglobal
+if bufexists("~/uWaterloo/2B/CS241/Assignments/A5/p8/galaxy.cc") | buffer ~/uWaterloo/2B/CS241/Assignments/A5/p8/galaxy.cc | else | edit ~/uWaterloo/2B/CS241/Assignments/A5/p8/galaxy.cc | endif
+if &buftype ==# 'terminal'
+  silent file ~/uWaterloo/2B/CS241/Assignments/A5/p8/galaxy.cc
+endif
+balt ~/uWaterloo/2B/CS241/Assignments/A7/p1/wlp4gen.cc
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 65 - ((34 * winheight(0) + 43) / 86)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 65
+normal! 0
+wincmd w
+argglobal
+enew
+file ~/uWaterloo/2B/CS241/Assignments/A7/p1/__Tagbar__.1
+balt ~/uWaterloo/2B/CS241/Assignments/A7/p1/wlp4gen.cc
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+wincmd w
+exe 'vert 1resize ' . ((&columns * 153 + 173) / 347)
+exe 'vert 2resize ' . ((&columns * 152 + 173) / 347)
+exe 'vert 3resize ' . ((&columns * 40 + 173) / 347)
+tabnext 1
+if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0&& getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20 winminheight=1 winminwidth=1 shortmess=filnxtToOFIc
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if filereadable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &g:so = s:so_save | let &g:siso = s:siso_save
+nohlsearch
+NvimTreeClose
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

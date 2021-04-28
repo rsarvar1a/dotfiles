@@ -1,0 +1,27 @@
+#!/bin/bash
+
+STYLE="pastel"
+
+rofi_command="rofi -theme $STYLE/screenshot.rasi"
+
+# Options
+screen=""
+area=""
+window=""
+
+# Variable passed to rofi
+options="$screen\n$area\n$window"
+
+chosen="$(echo -e "$options" | $rofi_command -p 'Take A Shot' -dmenu -selected-row 1)"
+case $chosen in
+    $screen)
+        sleep 0.5; shutter -f
+        ;;
+    $area)
+				shutter -s
+				;;
+    $window)
+        shutter -a
+        ;;
+esac
+

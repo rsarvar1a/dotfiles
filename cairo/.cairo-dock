@@ -1,0 +1,9 @@
+[Launch]
+last version=3.4.99.alpha1
+default backend=opengl
+last year=2021
+
+ping server=true
+
+[Gui]
+mode=1
