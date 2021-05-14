@@ -11,5 +11,5 @@ function! Pandoc_show()
   endif
 endfunction
 
-  autocmd BufWritePost *.md call Pandoc_show()
+  noremap <silent> <Leader>w :call Pandoc_show()<CR>
 ]]

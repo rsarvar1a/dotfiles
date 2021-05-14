@@ -3,14 +3,14 @@
 ## xfce4-settings daemon
 xfsettingsd &
 
-## Start Compositing Manager
-picom --experimental-backends -b
-
 ## Launch Polybar
 sh ~/.config/polybar/launch.sh
 
+## Launch picom
+picomd &
+
 ## Launch cairo
-cairo-dock -f &
+# cairo-dock -f &
 
 ## Launch Plank
 # exec plank &

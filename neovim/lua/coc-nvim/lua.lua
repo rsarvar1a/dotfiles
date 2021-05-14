@@ -47,3 +47,39 @@ vim.api.nvim_set_keymap(
   ":ClangFormat<CR>",
   {}
 )
+
+vim.api.nvim_set_keymap(
+  "n",
+  "gd",
+  "<Plug>(coc-definition)",
+  {
+    silent=true
+  }
+)
+
+vim.api.nvim_set_keymap(
+  "n",
+  "gi",
+  "<Plug>(coc-implementation)",
+  {
+    silent=true
+  }
+)
+
+vim.api.nvim_set_keymap(
+  "n",
+  "gr",
+  "<Plug>(coc-references)",
+  {
+    silent=true
+  }
+)
+
+vim.api.nvim_set_keymap(
+  "n",
+  "gs",
+  ":CocCommand clangd.switchSourceHeader<CR>",
+  {
+    silent=true
+  }
+)

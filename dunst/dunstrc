@@ -1,17 +1,17 @@
 [global]
 monitor = 0
 follow = mouse
-geometry = "400x120-40+130"
+geometry = "400x120-40+100"
 indicate_hidden = yes
 shrink = no
 separator_height = 4
 separator_color = auto
 padding = 20
 horizontal_padding = 20
-frame_width = 0
+frame_width = 1
 sort = no
 idle_threshold = 120
-font = JetBrainsMonoMedium Nerd Font 11
+font = VictorMono Nerd Font 14
 line_height = 4
 markup = full
 format = %s\n%b

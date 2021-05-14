@@ -2,7 +2,7 @@ configuration {
     show-icons:                     true;
   icon-theme:           "Hybrid";
     display-drun:           ":";
-    drun-display-format:            "{icon} {name}";
+    drun-display-format:            "{icon}{name}";
     threads:                        0;
     scroll-method:                  0;
     disable-history:                false;
@@ -18,12 +18,12 @@ window {
     background-color:               #00000000;
     text-color:                     @FG;
     border-radius:                  10px;
-    width:                          40%;
-    height:                         45%;
+    width:                          67%;
+    height:                         63%;
     location:                       center;
     anchor:                         center;
     x-offset:                       0;
-    y-offset:                       0;
+    y-offset:                       -10;
 }
 
 @media(min-width: 3840px)
@@ -133,11 +133,11 @@ case-indicator {
 
 listview {
     background-color:               #00000000;
-    columns:                        3;
+    columns:                        4;
     lines:                          10;
     spacing:                        10px;
     cycle:                          false;
-    dynamic:                        true;
+    dynamic:                        false;
     height: 80%;
     width: 80%;
     padding: 0% 0% 0% 0%;
@@ -158,7 +158,7 @@ mainbox {
 element {
     background-color:               @BG;
     text-color:                     @FG;
-    orientation:                    horizontal;
+    orientation:                    vertical;
     border-color:                   @BDR;
     border:                         1px;
     border-radius:                  4px;
@@ -167,14 +167,14 @@ element {
 
 element-icon {
     horizontal-align: 0.5;
-    size:                           42px;
+    size:                           48px;
     border:                         0px;
 }
 
 element-text {
     enabled: true;
     expand:                         true;
-    horizontal-align:               0;
+    horizontal-align:               0.5;
     vertical-align:                 0.5;
     margin:                         2px 0px 2px 2px;
 }

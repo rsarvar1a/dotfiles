@@ -44,6 +44,7 @@ return require('packer').startup(
 
     -- Indent lines.
     use {'Yggdroot/indentLine'}
+    use {'lukas-reineke/indent-blankline.nvim'}
 
     -- Colorschemes.
     use {'rainglow/vim'}

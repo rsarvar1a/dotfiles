@@ -19,7 +19,7 @@
     <primaryMonitor>Active</primaryMonitor>
   </placement>
   <theme>
-    <cornerRadius>1</cornerRadius>
+    <cornerRadius>3</cornerRadius>
     <invisibleHandles>yes</invisibleHandles>
     <name>two-border</name>
     <titleLayout>CILD</titleLayout>
@@ -94,8 +94,8 @@
     </popupFixedPosition>
   </resize>
   <margins>
-    <top>0</top>
-    <bottom>20</bottom>
+    <top>80</top>
+    <bottom>80</bottom>
     <left>0</left>
     <right>0</right>
   </margins>

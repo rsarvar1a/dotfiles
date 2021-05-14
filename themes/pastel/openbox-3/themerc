@@ -14,10 +14,10 @@ menu.title.text.justify: center
 # Widths.
 #
 
-padding.width: 2
-padding.height: 10
+padding.width: 5
+padding.height: 15
 
-border.width: 8
+border.width: 6
 menu.border.width: 8
 osd.border.width: 2
 

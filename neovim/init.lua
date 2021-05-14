@@ -33,7 +33,7 @@ cmd "set fillchars+=vert:┃"
 cmd "set autochdir"
 cmd "set wildmenu"
 cmd "set signcolumn=yes"
-cmd "set guifont=VictorMonoNerdFont-SemiBold:h16"
+cmd "set guifont=VictorMonoNerdFont:h14"
 cmd "set cursorline"
 cmd "set breakindent"
 cmd "set showbreak=->\\ \\ "
@@ -66,6 +66,10 @@ vim.api.nvim_command([[
 
 vim.api.nvim_command([[
   autocmd BufDelete * if empty(filter(tabpagebuflist(), '!buflisted(v:val)')) | Startify | endif
+]])
+
+vim.api.nvim_command([[
+  autocmd FileType python let b:coc_root_patterns = ['.git', '.env']
 ]])
 
 -- Colorschemes.
