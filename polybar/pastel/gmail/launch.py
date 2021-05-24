@@ -26,7 +26,7 @@ def print_count(count, is_odd=False):
     if count > 0:
         output = args.prefix + "  " + str(count)
     else:
-        output = "%{F#C0222F B#202024}          " + args.prefix + "  %{F#747070}0           %{F- B-}"
+        output = "%{F#DC5060 B#202024}          " + args.prefix + "  %{F#747070}0           %{F- B-}"
     print(output, flush=True)
 
 def update_count(count_was):
@@ -52,7 +52,7 @@ while True:
             time.sleep(2)
     except errors.HttpError as error:
         if error.resp.status == 404:
-            print(error_prefix + f'"{args.label}" label not found', flush=True)
+            print(args.prefix + "   睊", flush=True)
         else:
             print_count(count_was, True)
         time.sleep(5)

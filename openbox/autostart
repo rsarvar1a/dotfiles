@@ -7,7 +7,7 @@ xfsettingsd &
 sh ~/.config/polybar/launch.sh
 
 ## Launch picom
-picomd &
+picom &
 
 ## Launch cairo
 # cairo-dock -f &

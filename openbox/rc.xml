@@ -13,8 +13,8 @@
     <raiseOnFocus>no</raiseOnFocus>
   </focus>
   <placement>
-    <policy>Smart</policy>
-    <center>yes</center>
+    <policy>UnderMouse</policy>
+    <center>no</center>
     <monitor>Mouse</monitor>
     <primaryMonitor>Active</primaryMonitor>
   </placement>
@@ -1746,10 +1746,12 @@
   <applications>
     <application class="*">
       <decor>yes</decor>
+      <!--
       <position force="no">
         <x>center</x>
         <y>center</y>
       </position>
+      -->
     </application>
     <!--
     <application class="kitty">

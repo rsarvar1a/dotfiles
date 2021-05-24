@@ -3,7 +3,7 @@
 {
 
 CONFIG="$HOME/.config/polybar/pastel/config.ini"
-CMDARGS="--log=trace -c"
+CMDARGS="-c"
 
 # Terminate already running bar instances
 killall -q polybar
@@ -18,12 +18,14 @@ polybar $CMDARGS "$CONFIG" background-bot  &
 
 sleep 2
 
+polybar $CMDARGS "$CONFIG" systray  &
 polybar $CMDARGS "$CONFIG" cpu  &
 polybar $CMDARGS "$CONFIG" mem  &
 polybar $CMDARGS "$CONFIG" temp  &
 polybar $CMDARGS "$CONFIG" music  &
 polybar $CMDARGS "$CONFIG" battery  &
 polybar $CMDARGS "$CONFIG" volume  &
+polybar $CMDARGS "$CONFIG" brightness  &
 polybar $CMDARGS "$CONFIG" network  &
 polybar $CMDARGS "$CONFIG" datetime  &
 polybar $CMDARGS "$CONFIG" disk  &

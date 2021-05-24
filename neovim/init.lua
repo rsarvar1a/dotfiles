@@ -72,6 +72,10 @@ vim.api.nvim_command([[
   autocmd FileType python let b:coc_root_patterns = ['.git', '.env']
 ]])
 
+vim.api.nvim_command([[
+  cnoremap w!! execute 'silent! write !sudo tee % > /dev/null' <bar> edit!
+]])
+
 -- Colorschemes.
 
 require('colorizer').setup()
