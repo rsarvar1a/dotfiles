@@ -3,17 +3,17 @@ window.active.label.text.font:shadow=n
 window.inactive.label.text.font:shadow=n
 menu.items.font:shadow=n
 menu.title.text.font:shadow=n
-window.label.text.justify: center
+window.label.text.justify: left
 menu.title.text.justify: center
 
 #
 # Widths.
 #
 
-padding.width: 10
+padding.width: 8
 padding.height: 10
 
-border.width: 0
+border.width: 4
 menu.border.width: 8
 osd.border.width: 2
 
@@ -31,7 +31,7 @@ menu.separator.padding.height: 4
 # Active window.
 #
 
-window.active.border.color: #e4e0e0
+window.active.border.color: #c0a1c6
 window.active.client.padding.color: #121214
 
 window.active.title.bg: flat solid
@@ -42,7 +42,7 @@ window.active.title.separator.height: 1
 window.active.title.separator.color: #121214
 window.active.text.justify: center
 window.active.label.bg: parentrelative
-window.active.label.text.color: #e0c2ef
+window.active.label.text.color: #c0a1c6
 
 window.active.handle.bg: flat solid
 window.active.handle.bg.color: #303034
@@ -53,7 +53,7 @@ window.active.grip.bg.color: #303034
 # Inactive window.
 #
 
-window.inactive.border.color: #202028
+window.inactive.border.color: #28282F
 
 window.inactive.title.bg: flat solid
 window.inactive.title.bg.color: #121214
@@ -63,7 +63,7 @@ window.inactive.title.separator.width: 1
 window.inactive.title.separator.color: #121214
 window.inactive.text.justify: center
 window.inactive.label.bg: parentrelative
-window.inactive.label.text.color: #908c9a
+window.inactive.label.text.color: #A081A6
 
 window.inactive.handle.bg: flat solid
 window.inactive.handle.bg.color: #1F252B
@@ -84,16 +84,23 @@ window.inactive.button.pressed.bg: parentrelative
 window.inactive.button.toggled.bg: parentrelative
 window.inactive.button.disabled.bg: parentrelative
 
-window.active.button.max.unpressed.image.color: #121214
-window.active.button.max.unpressed.toggled.image.color: #00CA4E
-window.inactive.button.max.unpressed.image.color: #121214
-window.inactive.button.max.unpressed.toggled.image.color: #00CA4E
-window.inactive.button.max.unpressed.toggled.hover.image.color: #80EAAE
+window.active.button.max.unpressed.image.color: #90BA90
+window.active.button.max.unpressed.toggled.image.color: #70DE8A
+window.active.button.max.hover.toggled.image.color: #80FA9E
+window.active.button.max.hover.image.color: #80FA9E
+window.inactive.button.max.unpressed.image.color: #9090AA
+window.inactive.button.max.unpressed.toggled.image.color: #70DE8A
+window.inactive.button.max.hover.toggled.image.color: #80FA9E
+window.inactive.button.max.hover.image.color: #80FA9E
 
-window.active.button.desk.unpressed.image.color: #121214
-window.active.button.desk.unpressed.toggled.image.color: #3078B8
-window.inactive.button.desk.unpressed.image.color: #121214
-window.inactive.button.desk.unpressed.toggled.image.color: #3078B8
+window.active.button.desk.unpressed.image.color: #7090FA
+window.active.button.desk.unpressed.toggled.image.color: #408EDA
+window.active.button.desk.hover.toggled.image.color: #60BEEE
+window.active.button.desk.hover.image.color: #60BEEE
+window.inactive.button.desk.unpressed.image.color: #9090AA
+window.inactive.button.desk.unpressed.toggled.image.color: #408EDA
+window.inactive.button.desk.hover.toggled.image.color: #60BEEE
+window.inactive.button.desk.hover.image.color: #60BEEE
 
 window.active.button.close.unpressed.image.color: #FF605C
 window.active.button.close.pressed.image.color: #FF605C
@@ -102,12 +109,12 @@ window.inactive.button.close.pressed.image.color: #9090AA
 window.active.button.close.hover.image.color: #FFA07C
 window.inactive.button.close.hover.image.color: #FF605C
 
-window.active.button.iconify.unpressed.image.color: #B081B6
-window.active.button.iconify.pressed.image.color: #B081B6
+window.active.button.iconify.unpressed.image.color: #D0B070
+window.active.button.iconify.pressed.image.color: #D0B070
 window.inactive.button.iconify.unpressed.image.color: #9090AA
 window.inactive.button.iconify.pressed.image.color: #9090AA
-window.active.button.iconify.hover.image.color: #F0B1F6
-window.inactive.button.iconify.hover.image.color: #F0B1F6
+window.active.button.iconify.hover.image.color: #F0D080
+window.inactive.button.iconify.hover.image.color: #F0D080
 
 #
 # Menu.

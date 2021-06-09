@@ -21,8 +21,8 @@
   <theme>
     <cornerRadius>3</cornerRadius>
     <invisibleHandles>yes</invisibleHandles>
-    <name>two-border</name>
-    <titleLayout>CILD</titleLayout>
+    <name>rsardark</name>
+    <titleLayout>CIMDL</titleLayout>
     <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
