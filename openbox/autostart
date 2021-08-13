@@ -3,8 +3,9 @@
 ## xfce4-settings daemon
 xfsettingsd &
 
-## Launch Polybar
-sh ~/.config/polybar/launch.sh
+## Launch Polybar and Tint
+sh ~/.config/polybar/launch.sh &
+tint2 &
 
 ## Launch picom
 picom &
@@ -38,6 +39,9 @@ gs_run_once.sh
 issue_tracker.sh
 
 nitrogen --restore
+
+# Virtual network.
+sudo virsh net-start default
 
 # -----------------------------------------------------
 ### Initialize applications here.

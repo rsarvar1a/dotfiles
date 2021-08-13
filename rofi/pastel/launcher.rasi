@@ -7,7 +7,7 @@ configuration {
     scroll-method:                  0;
     disable-history:                false;
     fullscreen:                     false;
-  hide-scrollbar:         true;
+  hide-scrollbar:         false;
   sidebar-mode:           false;
 }
 
@@ -17,9 +17,9 @@ window {
     transparency:                   "real";
     background-color:               #00000000;
     text-color:                     @FG;
-    border-radius:                  10px;
-    width:                          67%;
-    height:                         63%;
+    border-radius:                  8px;
+    width:                          42%;
+    height:                         71.5%;
     location:                       center;
     anchor:                         center;
     x-offset:                       0;
@@ -28,25 +28,37 @@ window {
 
 @media(min-width: 3840px)
 {
+element
+{
+padding: 20px 40px 20px 20px;
+}
+element-icon
+{
+size: 40px;
+}
+listview
+{
+columns: 1;
+}
 prompt
 {
-font: "Victor Mono Italic Nerd Font Complete Mono 16";
+font: "Akrobat Bold 16";
 }
 textbox-prompt-colon
 {
-font: "VictorMono Nerd Font Mono 16";
+font: "Akrobat Bold 16";
 }
 inputbar
 {
-font: "Victor Mono Italic Nerd Font Complete Mono 16";
+font: "Akrobat Bold 16";
 }
 entry
 {
-font: "VictorMono Nerd Font Mono 16";
+font: "Akrobat Bold 16";
 }
 element-text
 {
-font: "VictorMono Nerd Font Mono 16";
+font: "Akrobat Bold 16";
 }
 entry
 {
@@ -55,13 +67,25 @@ padding: 4px 4px 16px 4px;
 }
 @media(max-width: 1921px)
 {
+element
+{
+padding: 30px 20px 40px 20px;
+}
+element-icon
+{
+size: 20px;
+}
+listview
+{
+columns: 1;
+}
 prompt
 {
 font: "VictorMono Italic Nerd Font 12";
 }
 textbox-prompt-colon
 {
-font: "VictorMono Nerd Font Mono 12";
+font: "Akrobat Bold 12";
 }
 inputbar
 {
@@ -69,11 +93,11 @@ font: "VictorMono Bold Italic Nerd Font 12";
 }
 entry
 {
-font: "VictorMono Nerd Font Mono 12";
+font: "Akrobat Bold 12";
 }
 element-text
 {
-font: "VictorMono Nerd Font Mono 12";
+font: "Akrobat Bold 12";
 }
 entry
 {
@@ -83,14 +107,14 @@ padding: 4px 4px 8px 4px;
 
 prompt {
   enabled:            true;
-  padding:            0;
+  padding:            10px 0px 0px 0px;
   background-color:     @BG;
   text-color:           @SEL;
 }
 
 textbox-prompt-colon {
   expand:             false;
-  str:              "";
+  str:              ">";
     background-color:               transparent;
     text-color:                     #DC2430;
     padding:                        4px 20px 4px 0px;
@@ -98,7 +122,7 @@ textbox-prompt-colon {
 }
 
 inputbar {
-  children:             [ textbox-prompt-colon, entry ];
+  children:             [ entry ];
     background-color:               @BG;
     text-color:                     @SEL;
     expand:                         false;
@@ -106,9 +130,7 @@ inputbar {
     border-radius:                  4px;
     border: 0px;
     border-color:                   #404040;
-    height: 5%;
-    width: 90%;
-    margin:                         0px 0px 20px 0px;
+    height: 1%;
     padding:                        1% 1% 1% 1%;
     position:                       center;
 }
@@ -119,10 +141,10 @@ entry {
     text-color:                     @SEL;
     placeholder-color:              @FG;
     horizontal-align:               0;
-    vertical-align:                 0;
+    vertical-align:                 0.5;
     placeholder:                    "Search Applications";
     blink:                          true;
-    padding:                        0px 0px 0px 0px;
+    padding:                        20px 20px 20px 20px;
 }
 
 case-indicator {
@@ -133,15 +155,15 @@ case-indicator {
 
 listview {
     background-color:               #00000000;
-    columns:                        4;
-    lines:                          10;
+    lines:                          6;
     spacing:                        10px;
     cycle:                          false;
     dynamic:                        false;
+    expand: true;
     height: 80%;
     width: 80%;
     padding: 0% 0% 0% 0%;
-    border-radius: 4px;
+    border-radius: 0px;
     border: 0px;
     border-color: #404040;
     layout:                         vertical;
@@ -152,31 +174,30 @@ mainbox {
     children:                       [ inputbar, listview ];
     spacing:                        1%;
     padding:                        25px;
-    border-radius:                  10px;
+    border-radius:                  0px;
 }
 
 element {
-    background-color:               @BG;
+    background-color:               #00000000;
     text-color:                     @FG;
-    orientation:                    vertical;
+    orientation:                    horizontal;
     border-color:                   @BDR;
-    border:                         1px;
+    border:                         0px;
     border-radius:                  4px;
-    padding:                        40px 40px 40px 40px;
+    padding:                        60px 40px 80px 40px;
 }
 
 element-icon {
     horizontal-align: 0.5;
-    size:                           48px;
     border:                         0px;
 }
 
 element-text {
     enabled: true;
     expand:                         true;
-    horizontal-align:               0.5;
+    horizontal-align:               0;
     vertical-align:                 0.5;
-    margin:                         2px 0px 2px 2px;
+    margin:                         5px 20px 0px 20px;
 }
 
 element normal.urgent,

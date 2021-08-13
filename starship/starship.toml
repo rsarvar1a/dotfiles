@@ -11,17 +11,17 @@ style_user = "fg:203 bg:235"
 [hostname]
 disabled = false
 ssh_only = true
-format = "[   $hostname]($style)"
+format = "[  $hostname]($style)"
 style = "fg:222 bg:235"
 
 [character]
 use_symbol_for_status = true
-success_symbol = "[ ](bold fg:077)"
-error_symbol = "[ ✗](bold fg:160)"
+success_symbol = "[ ](fg:077)"
+error_symbol = "[ ✗](fg:160)"
 # ﬦﬦ
 
 [directory]
-format = "[   $path]($style)"
+format = "[  $path]($style)"
 style = "fg:183 bg:235 italic"
 truncation_length = 2
 truncate_to_repo = true

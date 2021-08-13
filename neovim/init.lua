@@ -2,22 +2,18 @@ require('plugins.lua')
 
 -- Pre-imports.
 
-require('web-devicons.lua')
-
-require('statusline.lua')
 require('bufferline.lua')
-
-require('nvimtree.lua')
-require('nvim-telescope.lua')
-require('tagbar.lua')
-
-require('treesitter.lua')
-require('coc-nvim.lua')
-
-require('markdown.lua')
+require('compe.lua')
 require('hyperfocus.lua')
-
+require('lspconfig.lua')
+require('markdown.lua')
+require('nvimtree.lua')
+require('signs.lua')
 require('startify.lua')
+require('statusline.lua')
+require('tagbar.lua')
+require('treesitter.lua')
+require('web-devicons.lua')
 
 -- Global config.
 
@@ -32,13 +28,15 @@ cmd "set cmdheight=1"
 cmd "set fillchars+=vert:┃"
 cmd "set autochdir"
 cmd "set wildmenu"
-cmd "set signcolumn=yes"
-cmd "set guifont=VictorMonoNerdFont:h14"
+cmd "set signcolumn=yes:2"
+cmd "set guifont=JetBrainsMonoNerdFont:h14"
 cmd "set cursorline"
 cmd "set breakindent"
 cmd "set showbreak=->\\ \\ "
 cmd "set breakindentopt=shift:-2"
 cmd "set wrap"
+cmd "set completeopt=menuone,noselect"
+cmd "set title"
 
 g.auto_save = 1
 g.mapleader = "\\"
@@ -76,11 +74,12 @@ vim.api.nvim_command([[
   cnoremap w!! execute 'silent! write !sudo tee % > /dev/null' <bar> edit!
 ]])
 
+vim.cmd [[ let hidden_statusline = luaeval('require("opts.lua").hidden_statusline') | autocmd BufEnter,BufWinEnter,WinEnter,CmdwinEnter,TermEnter * nested if index(hidden_statusline, &ft) >= 0 | set laststatus=0 | else | set laststatus=2 | endif ]]
+
 -- Colorschemes.
 
 require('colorizer').setup()
 require('colours.lua')
 
 require('indentline.lua')
-
 

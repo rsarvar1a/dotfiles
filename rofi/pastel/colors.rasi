@@ -1,14 +1,14 @@
 /* Color-Scheme */
 
 * {
-    BG:    #18181aff;
-    BG2:   #28282fff;
-    BGA:   #202020df;
+    BG:    #18181aef;
+    BG2:   #202024ef;
+    BGA:   #202020ef;
     FG:    #D0D0D0ff;
     BDR:   #DC2430ff;
     SEL:   #C0A1C6ff;
-    UGT:   #EC407Aff;
-    IMG:   #EC407Aff;
+    UGT:   #DC5060ff;
+    IMG:   #DC5060ff;
     ON:    #61C766ff;
     OFF:   #EC7875ff;
     BDR:   #242428ff;

@@ -3,7 +3,8 @@
 STATUS="$(bluetoothctl info)"
 
 if [ ! -z "$(echo $STATUS | grep "Missing")" ]; then
-  echo '%{F#747070 B#202024}                        %{F- B-}'
+  echo '%{F#747070}  NONE %{F- B-}'
 else
-  echo '%{F#D4D0D0 B#6080C0}                        %{F- B-}'
+  name=$(bluetoothctl info | grep 'Name:' | grep -o ' .*' | cut -c 1-5)
+  echo '%{F#6080C0} ' ${name} '%{F- B-}'
 fi

@@ -24,9 +24,9 @@ def print_count(count, is_odd=False):
     tilde = '~' if is_odd else ''
     output = ''
     if count > 0:
-        output = args.prefix + "  " + str(count)
+        output = "%{F#DC5060}" + args.prefix + "  %{F-}" + str(count)
     else:
-        output = "%{F#DC5060 B#202024}          " + args.prefix + "  %{F#747070}0           %{F- B-}"
+        output = "%{F#707074}" + args.prefix + "  %{F#747070}0%{F- B-}"
     print(output, flush=True)
 
 def update_count(count_was):
