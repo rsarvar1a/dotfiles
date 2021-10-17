@@ -1,7 +1,7 @@
 /* Color-Scheme */
 
 * {
-    BG:    #18181aef;
+    BG:    #18181abf;
     BG2:   #202024ef;
     BGA:   #202020ef;
     FG:    #D0D0D0ff;
