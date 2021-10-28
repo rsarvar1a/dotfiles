@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-DIR="pastel"
-STYLE="rlauncher"
-
-rofi -no-lazy-grab -show run -modi run -theme "$DIR"/"$STYLE".rasi

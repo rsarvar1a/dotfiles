@@ -1,0 +1,3 @@
+# add this to support `.h` files as C++ headers
+%h -x
+%h c++-header

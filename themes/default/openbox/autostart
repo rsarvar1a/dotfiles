@@ -1,0 +1,46 @@
+#!/bin/bash
+
+## xfce4-settings daemon
+xfsettingsd &
+
+## Launch Polybar and Tint
+sh ~/.config/polybar/launch.sh &
+tint2 &
+
+## Launch picom
+picom &
+
+## Launch cairo
+# cairo-dock -f &
+
+## Launch Plank
+# exec plank &
+
+## Start Music Player Daemon
+# exec mpd &
+# mpd_discord_richpresence &
+
+## Notification Daemon
+
+## Thunar Daemon
+exec thunar --daemon &
+
+## Enable Super Keys For Menu
+ksuperkey -e 'Super_L=Alt_L|F1' &
+ksuperkey -e 'Super_R=Alt_L|F1' &
+
+## Enable power management
+xfce4-power-manager &
+
+nitrogen --restore
+
+# Virtual network.
+sudo virsh net-start default
+
+# -----------------------------------------------------
+### Initialize applications here.
+# -----------------------------------------------------
+
+
+
+

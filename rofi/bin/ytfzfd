@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-DIR="pastel"
-STYLE="ytfzf"
-
-mkdir -p ~/Downloads/YTFZF
-cd ~/Downloads/YTFZF
-YTFZF_EXTMENU="rofi -no-lazy-grab -dmenu -theme $DIR/$STYLE.rasi" ytfzf -fDd

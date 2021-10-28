@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+DIR="theme"
+STYLE="launcher"
+
+rofi -no-lazy-grab -show drun -modi window,drun -theme "$DIR"/"$STYLE".rasi
