@@ -10,7 +10,7 @@ echo -e "\033[4mApplying theme:\033[0m"
 # Link the default configuration pieces.
 for dir in $(ls -D themes/default); do
 #
-  echo -e "\t- Applying default/$dir ..."
+  echo -e "\t- Applying default/\033[3m$dir \033[0m..."
   rm active/$dir
   ln -s $PWD/themes/default/$dir active/$dir
 #
@@ -19,7 +19,7 @@ done
 # Link the added configuration pieces.
 for dir in $(cat themes/links); do
 #
-  echo -e "\t- Applying $theme/$dir ..."
+  echo -e "\t- Applying $theme/\033[3m$dir \033[0m..."
   rm active/$dir
   ln -s $PWD/themes/$theme/$dir active/$dir
 #
@@ -43,3 +43,5 @@ for script in $(ls hooks); do
   echo -e "\t- Running \033[3m$script \033[0m..."
   zsh hooks/$script &> /dev/null
 done
+
+echo $1 > .current

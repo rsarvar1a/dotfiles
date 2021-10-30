@@ -1,1 +1,1 @@
-echo 'topbar'
+echo 'Orchis-dark'

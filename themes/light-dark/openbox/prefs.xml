@@ -1,0 +1,38 @@
+<applications>
+  <application class="kitty">
+    <decor force="yes">no</decor>
+  </application>
+  <application class="KITTY_ROOT">
+    <decor force="yes">no</decor>
+  </application>
+  <application name="oblogout">
+    <position force="no">
+      <monitor>1</monitor>
+    </position>
+    <fullscreen>yes</fullscreen>
+  </application>
+  <application name="obconf">
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+    <size>
+      <width>50%</width>
+    </size>
+  </application>
+  <application title="MPlayer">
+    <decor>no</decor>
+  </application>
+  <application title="Nitrogen">
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+  </application>
+  <application name="polybar">
+    <layer force="yes">below</layer>
+  </application>
+  <application class="tint2">
+    <layer force="yes">above</layer>
+  </application>
+</applications>

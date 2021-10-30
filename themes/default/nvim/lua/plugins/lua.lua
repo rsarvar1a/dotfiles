@@ -67,6 +67,7 @@ return require('packer').startup(
 
     -- Startify.
     use {'mhinz/vim-startify'}
+    use {'famiu/nvim-reload'}
 
     -- Zen mode.
     use {'kdav5758/TrueZen.nvim'}

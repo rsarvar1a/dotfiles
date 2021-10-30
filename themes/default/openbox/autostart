@@ -32,10 +32,15 @@ ksuperkey -e 'Super_R=Alt_L|F1' &
 ## Enable power management
 xfce4-power-manager &
 
-nitrogen --restore
-
 # Virtual network.
 sudo virsh net-start default
+
+kitty --listen-on unix:@kitty --class kitty & echo $! > ~/.config/kitty/session
+sleep 0.5
+xdotool windowminimize $(xdotool search --pid `cat ~/.config/kitty/session`)
+
+cd ~/.config/dotfiles
+./apply.sh `cat .current`
 
 # -----------------------------------------------------
 ### Initialize applications here.

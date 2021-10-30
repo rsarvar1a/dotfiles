@@ -37,6 +37,7 @@ cmd "set breakindentopt=shift:0"
 cmd "set wrap"
 cmd "set completeopt=menuone,noselect"
 cmd "set title"
+cmd "set conceallevel=0"
 
 g.auto_save = 1
 g.mapleader = "\\"

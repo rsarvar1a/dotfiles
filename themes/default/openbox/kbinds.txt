@@ -1,0 +1,107 @@
+2021-10-30	rc.xml KEYBINDS
+-------------------------------
+
+ 0	C-S-R         				openbox --reconfigure; rtile.tb --all
+ 1	W-Up          				rtile.rb --split-up
+ 2	W-Down        				rtile.rb --split-down
+ 3	W-Left        				rtile.rb --split-left
+ 4	W-Right       				rtile.rb --split-right
+ 5	S-W-Up        				rtile.rb --grow-up
+ 6	S-W-Down      				rtile.rb --grow-down
+ 7	S-W-Left      				rtile.rb --grow-left
+ 8	S-W-Right     				rtile.rb --grow-right
+ 9	S-W-q         				rtile.rb tl
+10	S-W-w         				rtile.rb t
+11	S-W-e         				rtile.rb tr
+12	S-W-a         				rtile.rb l
+13	S-W-d         				rtile.rb r
+14	S-W-z         				rtile.rb bl
+15	S-W-x         				rtile.rb b
+16	S-W-c         				rtile.rb br
+17	C-W-t         				rtile.rb --all-active
+18	C-W-b         				rtile.rb --binary
+19	C-W-s         				rtile.rb --swap
+20	C-W-c         				rtile.rb --cycle
+21	W-1           				GoToDesktop
+22	W-2           				GoToDesktop
+23	W-3           				GoToDesktop
+24	W-4           				GoToDesktop
+25	W-5           				GoToDesktop
+26	W-6           				GoToDesktop
+27	W-7           				GoToDesktop
+28	W-8           				GoToDesktop
+29	W-9           				GoToDesktop
+30	W-0           				GoToDesktop
+31	W-C-1         				GoToDesktop
+32	W-C-2         				GoToDesktop
+33	W-C-3         				GoToDesktop
+34	W-C-4         				GoToDesktop
+35	W-C-5         				GoToDesktop
+36	C-W-a         				ToggleOmnipresent
+37	S-W-1         				SendToDesktop
+38	S-W-2         				SendToDesktop
+39	S-W-3         				SendToDesktop
+40	S-W-4         				SendToDesktop
+41	S-W-5         				SendToDesktop
+42	S-W-6         				SendToDesktop
+43	S-W-7         				SendToDesktop
+44	S-W-8         				SendToDesktop
+45	S-W-9         				SendToDesktop
+46	S-W-0         				SendToDesktop
+47	C-S-W-1       				SendToDesktop
+48	C-S-W-2       				SendToDesktop
+49	C-S-W-3       				SendToDesktop
+50	C-S-W-4       				SendToDesktop
+51	C-S-W-5       				SendToDesktop
+52	A-Tab         				NextWindow
+53	W-Tab         				NextWindow
+54	XF86AudioRaiseVolume	volume-up
+55	XF86AudioLowerVolume	volume-down
+56	XF86AudioMute  			amixer set Master toggle
+57	XF86AudioStop  			mpc stop
+58	XF86AudioPlay  			mpc toggle
+59	XF86AudioPrev  			mpc prev
+60	XF86AudioNext  			mpc next
+61	XF86MonBrightnessUp	backlight-up
+62	XF86MonBrightnessDown	backlight-down
+63	S-Print       				shutter -s
+64	A-Print       				shutter -a
+65	C-Print       				shutter -f
+66	W-e           				geany
+67	W-f           				ToggleMaximizeFull
+68	W-t           				kitty @ --to=unix:@kitty new-window --window-type=os
+69	W-Return      				kitty @ --to=unix:@kitty new-window --window-type=os
+70	W-w           				~/.config/rofi/bin/windows
+71	W-n           				networkmanager_dmenu
+72	A-F1          				~/.config/rofi/bin/launcher
+73	W-S-y         				~/.config/rofi/bin/ytfzf
+74	W-A-y         				~/.config/rofi/bin/ytfzfd
+75	W-x           				~/.config/rofi/bin/powermenu
+76	W-s           				~/.config/rofi/bin/screenshot
+77	W-r           				~/.config/rofi/bin/rlauncher
+78	W-S-b         				~/.config/polybar/launch.sh
+79	W-p           				color_picker
+80	W-v           				tasks
+81	C-S-R         				Reconfigure
+82	W-Escape      				xkill
+83	W-c           				Close
+84	W-q           				/usr/local/bin/word-lookup.sh
+85	A-F5          				Iconify
+86	A-F6          				ToggleMaximizeFull
+87	A-F7          				ToggleDecorations
+88	A-F11         				ToggleFullscreen
+89	W-d           				ToggleShowDesktop
+90	A-comma       				Resize
+91	A-m           				Move
+92	W-space       				root-menu
+93	C-A-space     				app-menu
+94	A-space       				client-menu
+95	W-KP_1        				UnmaximizeFull
+96	W-KP_2        				UnmaximizeFull
+97	W-KP_3        				UnmaximizeFull
+98	W-KP_4        				UnmaximizeFull
+99	W-KP_5        				MaximizeFull
+100	W-KP_6        				UnmaximizeFull
+101	W-KP_7        				UnmaximizeFull
+102	W-KP_8        				UnmaximizeFull
+103	W-KP_9        				UnmaximizeFull

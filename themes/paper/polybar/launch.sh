@@ -14,7 +14,7 @@ while pgrep -u $UID -x polybar &>/dev/null; do sleep 1; done
 for mon in eDP1 DP1
 do
   MONITOR="$mon" polybar $CMDARGS "$CONFIG" background-top &
-  sleep 2
+  sleep 0.5
   # MONITOR="$mon" polybar $CMDARGS "$CONFIG" systray &
   MONITOR="$mon" polybar $CMDARGS "$CONFIG" cpu &
   MONITOR="$mon" polybar $CMDARGS "$CONFIG" mem &

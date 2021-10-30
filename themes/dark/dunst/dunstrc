@@ -1,7 +1,6 @@
 [global]
 monitor = 0
 follow = mouse
-geometry = "400x120-40+100"
 indicate_hidden = yes
 shrink = no
 separator_height = 4
@@ -30,6 +29,11 @@ browser = x-www-browser -new-tab
 always_run_script = true
 title = Dunst
 class = Dunst
+
+width = 300
+height = 300
+origin = top-right
+offset = 20x64
 
 [shortcuts]
 close = ctrl+shift+space

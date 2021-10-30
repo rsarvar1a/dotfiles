@@ -1,4 +1,4 @@
-format = """[](fg:252)[](bg:252)$username$hostname$directory$git_branch$time[i](fg:252 bg:252)[](fg:252) $character """
+format = """$username$hostname$directory$git_branch$time [\\(](fg:248)$character[\\)](fg:248) => """
 
 add_newline=false
 
@@ -6,23 +6,24 @@ add_newline=false
 disabled = false
 show_always = false
 format = "[$user]($style)"
-style_user = "fg:124 bg:252"
+style_user = "fg:196"
 
 [hostname]
 disabled = false
 ssh_only = true
 format = "[  $hostname]($style)"
-style = "fg:222 bg:252"
+style = "fg:222 "
 
 [character]
 use_symbol_for_status = true
-success_symbol = "[ ](fg:077)"
-error_symbol = "[ ✗](fg:124)"
+format = "$symbol"
+success_symbol = "[](fg:077)"
+error_symbol = "[✗](fg:124)"
 # ﬦﬦ
 
 [directory]
 format = "[   $path]($style)"
-style = "fg:124 bg:252 italic"
+style = "fg:160  italic"
 truncation_length = 2
 truncate_to_repo = true
 truncation_symbol = "…/"
@@ -36,10 +37,10 @@ min_time = 1252
 [time]
 disabled = false
 format = "[  $time]($style)"
-style = "fg:238 bg:252"
+style = "fg:68"
 
 [git_branch]
-style = "bold fg:135 bg:252"
+style = "bold fg:135 "
 format = "[  $branch]($style)"
 
 [git_status]

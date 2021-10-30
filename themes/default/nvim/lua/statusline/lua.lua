@@ -211,6 +211,7 @@ components.active[2][1] = {
   icon = " ",
   hl = {
     fg = 'red',
+    bg = 'bg2',
     style = 'bold'
   },
   right_sep = 
@@ -226,6 +227,7 @@ components.active[2][2] = {
   icon = ' ',
   hl = {
     fg = 'yellow',
+    bg = 'bg2',
     style = 'bold'
   },
   right_sep = 
@@ -241,6 +243,7 @@ components.active[2][3] = {
   icon = ' ',
   hl = {
     fg = 'blue',
+    bg = 'bg2',
     style = 'bold'
   },
   right_sep = 
@@ -256,6 +259,7 @@ components.active[2][4] = {
   icon = ' ',
   hl = {
     fg = 'fg1',
+    bg = 'bg2',
     style = 'bold'
   },
   right_sep =

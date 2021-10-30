@@ -216,10 +216,6 @@ element alternate.active {
     text-color:                     @FG;
 }
 
-element-text selected {
-  text-color: @BG;
-}
-
 element selected {
     background-color:               @SEL;
     text-color:                     @BG;

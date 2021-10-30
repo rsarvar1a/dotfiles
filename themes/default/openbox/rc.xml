@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
+<openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude"> 
   <resistance>
     <strength>10</strength>
     <screen_edge_strength>100</screen_edge_strength>
@@ -19,7 +19,7 @@
     <primaryMonitor>Active</primaryMonitor>
   </placement>
   <theme>
-    <cornerRadius>2</cornerRadius>
+    <cornerRadius>6</cornerRadius>
     <invisibleHandles>yes</invisibleHandles>
     <name>theme</name>
     <titleLayout>CIML</titleLayout>
@@ -78,7 +78,6 @@
       <name>10</name>
       <name>11</name>
       <name>12</name>
-      <name>13</name>
       <name>14</name>
       <name>15</name>
     </names>
@@ -103,7 +102,7 @@
     <position>Top</position>
     <floatingX>0</floatingX>
     <floatingY>0</floatingY>
-    <noStrut>no</noStrut>
+    <noStrut>yes</noStrut>
     <stacking>Below</stacking>
     <direction>Horizontal</direction>
     <autoHide>no</autoHide>
@@ -114,6 +113,11 @@
   <!-- ******************* KEYBINDINGS ******************* -->
   <keyboard>
     <chainQuitKey/>
+    <keybind key="C-S-R">
+      <action name="Execute">
+        <command>openbox --reconfigure; rtile.tb --all</command>
+      </action>
+    </keybind>
     <!-- Tiling! -->
     <keybind key="W-Up">
       <action name="Execute">
@@ -469,12 +473,12 @@
     </keybind>
     <keybind key="W-t">
       <action name="Execute">
-        <command>kitty --class kitty</command>
+        <command>kitty @ --to=unix:@kitty new-window --window-type=os</command>
       </action>
     </keybind>
     <keybind key="W-Return">
       <action name="Execute">
-        <command>kitty --class kitty</command>
+        <command>kitty @ --to=unix:@kitty new-window --window-type=os</command>
       </action>
     </keybind>
     <keybind key="W-w">
@@ -1024,162 +1028,7 @@
     <applicationIcons>yes</applicationIcons>
     <manageDesktops>yes</manageDesktops>
   </menu>
-  <applications>
-    <application class="*">
-      <decor>yes</decor>
-      <!--
-      <position force="no">
-        <x>center</x>
-        <y>center</y>
-      </position>
-      -->
-    </application>
-    <!--
-    <application class="kitty">
-      <decor>no</decor>
-    </application>
-    <application class="nvim">
-      <decor>no</decor>
-    </application>
-    <application class="vis">
-      <decor>no</decor>
-    </application>
-    <application class="ncmpcpp">
-      <decor>no</decor>
-    </application>
-    <application class="bashtop">
-      <decor>no</decor>
-    </application>
-    -->
-    <application name="oblogout">
-      <position force="no">
-        <monitor>1</monitor>
-      </position>
-      <fullscreen>yes</fullscreen>
-    </application>
-    <application name="obconf">
-      <position force="yes">
-        <x>center</x>
-        <y>center</y>
-      </position>
-      <size>
-        <width>50%</width>
-      </size>
-    </application>
-    <application title="MPlayer">
-      <decor>no</decor>
-    </application>
-    <application title="Nitrogen">
-      <position force="yes">
-        <x>center</x>
-        <y>center</y>
-      </position>
-    </application>
-    <application name="polybar">
-      <layer force="yes">below</layer>
-    </application>
-    <application class="tint2">
-      <layer force="yes">above</layer>
-    </application>
-    <!--	<application class="*">
-	  <focus>yes</focus>
-	</application> -->
-    <!--
-
-  # this is an example with comments through out. use these to make your
-  # own rules, but without the comments of course.
-  # you may use one or more of the name/class/role/title/type rules to specify
-  # windows to match
-
-  <application name="the window's _OB_APP_NAME property (see obxprop)"
-              class="the window's _OB_APP_CLASS property (see obxprop)"
-          groupname="the window's _OB_APP_GROUP_NAME property (see obxprop)"
-         groupclass="the window's _OB_APP_GROUP_CLASS property (see obxprop)"
-               role="the window's _OB_APP_ROLE property (see obxprop)"
-              title="the window's _OB_APP_TITLE property (see obxprop)"
-               type="the window's _OB_APP_TYPE property (see obxprob)..
-                      (if unspecified, then it is 'dialog' for child windows)">
-  # you may set only one of name/class/role/title/type, or you may use more
-  # than one together to restrict your matches.
-
-  # the name, class, role, and title use simple wildcard matching such as those
-  # used by a shell. you can use * to match any characters and ? to match
-  # any single character.
-
-  # the type is one of: normal, dialog, splash, utility, menu, toolbar, dock,
-  #    or desktop
-
-  # when multiple rules match a window, they will all be applied, in the
-  # order that they appear in this list
-
-
-    # each rule element can be left out or set to 'default' to specify to not 
-    # change that attribute of the window
-
-    <decor>yes</decor>
-    # enable or disable window decorations
-
-    <shade>no</shade>
-    # make the window shaded when it appears, or not
-
-    <position force="no">
-      # the position is only used if both an x and y coordinate are provided
-      # (and not set to 'default')
-      # when force is "yes", then the window will be placed here even if it
-      # says you want it placed elsewhere.  this is to override buggy
-      # applications who refuse to behave
-      <x>center</x>
-      # a number like 50, or 'center' to center on screen. use a negative number
-      # to start from the right (or bottom for <y>), ie -50 is 50 pixels from
-      # the right edge (or bottom). use 'default' to specify using value
-      # provided by the application, or chosen by openbox, instead.
-      <y>200</y>
-      <monitor>1</monitor>
-      # specifies the monitor in a xinerama setup.
-      # 1 is the first head, or 'mouse' for wherever the mouse is
-    </position>
-
-    <size>
-      # the size to make the window.
-      <width>20</width>
-      # a number like 20, or 'default' to use the size given by the application.
-      # you can use fractions such as 1/2 or percentages such as 75% in which
-      # case the value is relative to the size of the monitor that the window
-      # appears on.
-      <height>32%</height>
-    </size>
-
-    <focus>yes</focus>
-    # if the window should try be given focus when it appears. if this is set
-    # to yes it doesn't guarantee the window will be given focus. some
-    # restrictions may apply, but Openbox will try to
-
-    <desktop>1</desktop>
-    # 1 is the first desktop, 'all' for all desktops
-
-    <layer>normal</layer>
-    # 'above', 'normal', or 'below'
-
-    <iconic>no</iconic>
-    # make the window iconified when it appears, or not
-
-    <skip_pager>no</skip_pager>
-    # asks to not be shown in pagers
-
-    <skip_taskbar>no</skip_taskbar>
-    # asks to not be shown in taskbars. window cycling actions will also
-    # skip past such windows
-
-    <fullscreen>yes</fullscreen>
-    # make the window in fullscreen mode when it appears
-
-    <maximized>true</maximized>
-    # 'Horizontal', 'Vertical' or boolean (yes/no)
-  </application>
-
-  # end of the example
--->
-  </applications>
+  <xi:include href="prefs.xml"/>
 </openbox_config>
 <!-- vim:sw=2
 -->

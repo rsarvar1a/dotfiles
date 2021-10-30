@@ -2,9 +2,11 @@ dunst
 kitty
 ncmpcpp
 nvim/lua/palette
+openbox/prefs.xml
 picom
 polybar
 rofi/theme
+spicetify/config.ini
 starship
 theme
 walls

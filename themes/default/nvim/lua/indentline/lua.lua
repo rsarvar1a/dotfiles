@@ -22,5 +22,5 @@ vim.api.nvim_set_keymap("n", "<F2>", ":set tabstop=2 <CR> :retab <CR> :set tabst
 
 vim.cmd([[
 autocmd InsertEnter  *.{markdown,md,json,tex} set conceallevel=0
-autocmd InsertLeave  *.{markdown,md,json,tex} set conceallevel=2
+autocmd InsertLeave  *.{markdown,md,json,tex} set conceallevel=0
 ]])
