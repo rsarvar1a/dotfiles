@@ -10,8 +10,8 @@ vim.api.nvim_set_keymap(
 
 vim.api.nvim_set_keymap(
     "n",
-    "<C-f>",
-    ":Vista finder!",
+    "<C-m>",
+    ":Vista finder!<CR>",
     {
       noremap = true,
       silent = true

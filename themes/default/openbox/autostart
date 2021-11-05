@@ -35,12 +35,8 @@ xfce4-power-manager &
 # Virtual network.
 sudo virsh net-start default
 
-kitty --listen-on unix:@kitty --class kitty & echo $! > ~/.config/kitty/session
-sleep 0.5
-xdotool windowminimize $(xdotool search --pid `cat ~/.config/kitty/session`)
-
-cd ~/.config/dotfiles
-./apply.sh `cat .current`
+# Create kitty's root process.
+launchkitty
 
 # -----------------------------------------------------
 ### Initialize applications here.

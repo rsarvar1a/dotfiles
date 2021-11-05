@@ -37,18 +37,18 @@ offset = 20x64
 
 [urgency_low]
 timeout = 2
-background = "#D0D0D4"
+background = "#F9F9F9"
 foreground = "#303034"
 frame_color = "#A071A6"
 
 [urgency_normal]
 timeout = 5
-background = "#D0D0D4"
+background = "#F9F9F9"
 foreground = "#202024"
 frame_color = "#A071A6"
 
 [urgency_critical]
 timeout = 0
-background = "#D0D0D4"
+background = "#F9F9F9"
 foreground = "#DC2430"
 frame_color = "#DC2430"

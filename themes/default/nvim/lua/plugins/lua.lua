@@ -1,4 +1,4 @@
-local packer_exists = pcall(vim.cmd, [[packadd packer.nvim]])
+
 
 return require('packer').startup(
   function(use)
@@ -24,7 +24,13 @@ return require('packer').startup(
     -- Completion.
     use {'neovim/nvim-lspconfig'}
     use {'onsails/lspkind-nvim'}
-    use {'hrsh7th/nvim-compe'}
+    use {'hrsh7th/nvim-cmp'}
+    use {'hrsh7th/cmp-nvim-lsp'}
+    use {'hrsh7th/cmp-buffer'}
+    use {'hrsh7th/cmp-path'}
+    use {'hrsh7th/cmp-cmdline'}
+    use {'hrsh7th/cmp-vsnip'}
+    use {'hrsh7th/vim-vsnip'}
     use {'folke/lsp-colors.nvim'}
     use {'rhysd/vim-clang-format'}
 
