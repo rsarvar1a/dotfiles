@@ -3,9 +3,12 @@ kitty
 ncmpcpp
 nvim/lua/palette
 openbox/prefs.xml
+openbox/rounding.xml
+openbox/title.xml
 picom
 polybar
 rofi/theme
+rtile/rtile.xml
 spicetify/config.ini
 starship
 theme

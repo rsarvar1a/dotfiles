@@ -1,0 +1,63 @@
+format = """[$username$hostname$directory$git_branch$time ](bg:236) $character ==> """
+
+add_newline=false
+
+[username]
+disabled = false
+show_always = false
+format = "[$user]($style)"
+style_user = "fg:203 bg:236"
+
+[hostname]
+disabled = false
+ssh_only = true
+format = "[  $hostname]($style)"
+style = "fg:222 "
+
+[character]
+use_symbol_for_status = true
+format = "$symbol"
+success_symbol = "[](fg:113)"
+error_symbol = "[✗](fg:203)"
+# ﬦﬦ
+
+[directory]
+format = " in[   $path]($style)"
+style = "fg:203 bg:236 italic"
+truncation_length = 2
+truncate_to_repo = true
+truncation_symbol = "…/"
+fish_style_pwd_dir_length = 252
+
+[cmd_duration]
+format = " took [$duration]($style)"
+style = "039"
+min_time = 1252
+
+[time]
+disabled = false
+format = " at[  $time]($style)"
+style = "fg:117 bg:236"
+
+[git_branch]
+style = "bold fg:183 bg:236"
+format = " on[  $branch]($style)"
+
+[git_status]
+style = "fg:252"
+
+[battery]
+format = "with [$symbol$percentage]($style)"
+full_symbol = "🔋 "
+
+[[battery.display]]
+threshold = 25
+style = "bold 124"
+
+[[battery.display]]
+threshold = 50
+style = "221"
+
+[[battery.display]]
+threshold = 100
+style = "77"

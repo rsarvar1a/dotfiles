@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude"> 
+<openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
   <resistance>
     <strength>10</strength>
     <screen_edge_strength>100</screen_edge_strength>
@@ -19,10 +19,10 @@
     <primaryMonitor>Active</primaryMonitor>
   </placement>
   <theme>
-    <cornerRadius>6</cornerRadius>
+    <xi:include href="rounding.xml"/>
+    <xi:include href="title.xml"/>
     <invisibleHandles>yes</invisibleHandles>
     <name>theme</name>
-    <titleLayout>CIML</titleLayout>
     <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
