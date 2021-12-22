@@ -1,0 +1,14 @@
+
+*
+{
+  X: 20px;
+  Y: 64px;
+  ACT: #60ca6eff;
+  BG: #f9f9f9bf;
+  DULL: #909090bf;
+  FG: #202024ff;
+  LINE: #707070ff;
+  SEL: #a071a6ff;
+  SHEER: #f0f0f0bf;
+  UGT: #dc5060ff;
+}

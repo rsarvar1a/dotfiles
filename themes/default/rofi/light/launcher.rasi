@@ -1,0 +1,122 @@
+
+configuration
+{
+  disable-history: false;
+  display-drun: ":";
+  drun-display-format: "{icon}{name}";
+  font: "Victor Mono Nerd Font Bold 16";
+  hide-scrollbar: false;
+  icon-theme: "Hybrid";
+  scroll-method: 0;
+  show-icons: true;
+  threads: 0;
+}
+
+@import "colors.rasi"
+
+window 
+{
+  anchor: northwest;
+  background-color: transparent;
+  border-radius: 10px;
+  height: 50%;
+  location: northwest;
+  text-color: @FG;
+  width: 25%;
+  x-offset: @X;
+  y-offset: @Y;
+}
+
+mainbox 
+{
+  background-color: @SHEER;
+  border-radius: 0px;
+  children: [inputbar, listview];
+  padding: 20px;
+  spacing: 1%;
+}
+
+inputbar 
+{
+  background-color: @BG;
+  border-radius: 4px;
+  border-color: @LINE;
+  children: [entry];
+  padding: 0.5% 0.5% 0.5% 0.5%;
+  position: center;
+}
+
+entry 
+{
+  background-color: transparent;
+  blink: true;
+  text-color: @SEL;
+  padding: 10px 10px 10px 10px;
+  placeholder-color: @DULL;
+  placeholder: "Search Applications";
+}
+
+listview 
+{
+  background-color: transparent;
+  height: 90%;
+  lines: 10;
+  spacing: 1%;
+  width: 80%;
+}
+
+element 
+{
+  background-color: transparent;
+  border-radius: 4px;
+  orientation: horizontal;
+  padding: 10px 20px 10px 20px;
+}
+
+element-icon
+{
+  horizontal-align: 0.5;
+  background-color: transparent;
+  size: 40px;
+}
+
+element-text 
+{ 
+  background-color: transparent;
+  margin: 5px 10px 0px 20px;
+  text-color: @FG;
+  vertical-align: 0.5;
+}
+
+element normal.urgent, 
+element alternate.urgent 
+{
+  background-color: @UGT;
+}
+
+element normal.active,
+element alternate.active 
+{
+  background-color: @ACT;
+}
+
+element selected
+{
+  background-color: @SEL;
+  text-color: @BG;
+}
+
+element selected.urgent 
+{
+  background-color: @UGT;
+}
+
+element selected.active 
+{
+  background-color: @DULL;
+}
+
+element-text selected
+{
+  text-color: @BG;
+}

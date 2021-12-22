@@ -16,7 +16,7 @@
 # row_circle      row_square      row_rounded      row_alt
 
 theme="powermenu"
-dir="$HOME/.config/rofi/theme/"
+dir="~/.config/rofi/$(cat ~/.config/rofi/theme)"
 
 # random colors
 styles=($(ls -p --hide="colors.rasi" $dir/styles))
@@ -34,11 +34,11 @@ uptime=$(uptime -p | sed -e 's/up //g')
 rofi_command="rofi -theme $dir/$theme"
 
 # Options
-shutdown=""
-reboot=""
-lock=""
-suspend=""
-logout=""
+shutdown=
+reboot=
+lock=
+suspend=
+logout=
 
 # Confirmation
 confirm_exit() {
@@ -87,7 +87,7 @@ case $chosen in
 		if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then
 			mpc -q pause
 			amixer set Master mute
-			systemctl suspend
+			sudo systemctl suspend -i
 		elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then
 			exit 0
         else

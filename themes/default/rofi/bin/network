@@ -1,6 +1,6 @@
 #!/bin/bash
 
-STYLE="theme"
+STYLE="~/.config/rofi/$(cat ~/.config/rofi/theme)"
 
 rofi_command="rofi -theme $STYLE/network.rasi"
 

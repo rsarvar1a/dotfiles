@@ -1,13 +1,13 @@
 #!/bin/bash
 
-STYLE="theme"
+DIR="~/.config/rofi/$(cat ~/.config/rofi/theme)"
 
-rofi_command="rofi -theme $STYLE/screenshot.rasi"
+rofi_command="rofi -theme $DIR/screenshot.rasi"
 
 # Options
-screen=""
-area=""
-window=""
+screen=""
+area=""
+window=""
 
 # Variable passed to rofi
 options="$screen\n$area\n$window"

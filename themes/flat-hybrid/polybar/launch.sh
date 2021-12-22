@@ -24,7 +24,7 @@ do
   MONITOR="$mon" polybar $CMDARGS "$CONFIG" volume &
   MONITOR="$mon" polybar $CMDARGS "$CONFIG" network &
   MONITOR="$mon" polybar $CMDARGS "$CONFIG" datetime &
-  # MONITOR="$mon" polybar $CMDARGS "$CONFIG" polywin &
+  MONITOR="$mon" polybar $CMDARGS "$CONFIG" polywin &
   MONITOR="$mon" polybar $CMDARGS "$CONFIG" bluetooth &
   MONITOR="$mon" polybar $CMDARGS "$CONFIG" workspaces &
 done

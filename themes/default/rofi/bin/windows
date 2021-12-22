@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DIR="theme"
+DIR="~/.config/rofi/$(cat ~/.config/rofi/theme)"
 STYLE="windows"
 
 rofi -no-lazy-grab -show window -modi window,drun -theme "$DIR"/"$STYLE".rasi

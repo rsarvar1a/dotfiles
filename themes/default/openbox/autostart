@@ -5,7 +5,6 @@ xfsettingsd &
 
 ## Launch Polybar and Tint
 sh ~/.config/polybar/launch.sh &
-tint2 &
 
 ## Launch picom
 picom &
@@ -37,6 +36,9 @@ sudo virsh net-start default
 
 # Create kitty's root process.
 launchkitty
+
+# Apply the wallpaper hook.
+~/.config/dotfiles/active/walls/hook.sh
 
 # -----------------------------------------------------
 ### Initialize applications here.

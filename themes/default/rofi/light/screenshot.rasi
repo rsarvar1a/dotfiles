@@ -1,0 +1,97 @@
+
+configuration
+{
+  disable-history: false;
+  display-drun: ":";
+  drun-display-format: "{name}";
+  font: "Victor Mono Nerd Font Bold 40";
+  fullscreen: false;
+  hide-scrollbar: false;
+  icon-theme: "Hybrid";
+  scroll-method: 0;
+  sidebar-mode: false;
+  threads: 0;
+}
+
+@import "colors.rasi"
+
+window 
+{
+  anchor: northwest;
+  background-color: transparent;
+  border-radius: 10px;
+  height: 24.6%;
+  location: northwest;
+  text-color: @FG;
+  width: 5%;
+  x-offset: @X;
+  y-offset: @Y;
+}
+
+mainbox 
+{
+  background-color: @SHEER;
+  border-radius: 0px;
+  children: [listview];
+  padding: 20px;
+  spacing: 1%;
+}
+
+listview 
+{
+  background-color: transparent;
+  height: 90%;
+  lines: 10;
+  spacing: 1%;
+  width: 80%;
+}
+
+element 
+{
+  background-color: transparent;
+  border-radius: 4px;
+  orientation: horizontal;
+  padding: 0px 0px 0px 10px;
+}
+
+element-text 
+{ 
+  background-color: transparent;
+  horizontal-align: 0.5;
+  margin: 40px 40px 40px 10px;
+  text-color: @SEL;
+  vertical-align: 0.5;
+}
+
+element normal.urgent, 
+element alternate.urgent 
+{
+  background-color: @UGT;
+}
+
+element normal.active,
+element alternate.active 
+{
+  background-color: @ACT;
+}
+
+element selected
+{
+  background-color: @UGT;
+  text-color: @BG;
+}
+
+element selected.urgent 
+{
+  background-color: @UGT;
+}
+
+element selected.active 
+{
+  background-color: @DULL;
+}
+
+element-text selected
+{
+  text-color: @BG;
+}

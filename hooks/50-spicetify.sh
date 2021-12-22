@@ -1,1 +1,1 @@
-spicetify apply
+spicetify watch & disown spicetify

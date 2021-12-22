@@ -3,14 +3,13 @@
 
 # SETTINGS {{{ ---
 
-active_text_color="#b0b0b0"
-#active_text_color='#ffaacc'
-active_bg="#202024"
+active_text_color="#202024"
+active_bg="#d0d0d4"
 active_underline="#dc5060"
 line_size=0
 
-inactive_text_color="#606060"
-inactive_bg="#121214"
+inactive_text_color="#808080"
+inactive_bg="#f0f0f0"
 inactive_underline="#a071a6"
 
 separator="   "
@@ -18,8 +17,8 @@ show="window_title" # options: window_title, window_class, window_classname
 forbidden_classes="Polybar Conky Gmrun plasmashell"
 empty_desktop_message=""
 
-char_limit=30
-max_windows=20
+char_limit=22
+max_windows=10
 char_case="normal" # normal, upper, lower
 add_spaces="true"
 resize_increment=15

@@ -209,6 +209,11 @@
         <command>rtile.rb --binary</command>
       </action>
     </keybind>
+    <keybind key="C-S-W-b">
+      <action name="Execute">
+        <command>rtile.rb --all-binary</command>
+      </action>
+    </keybind>
     <keybind key="C-W-s">
       <action name="Execute">
         <command>rtile.rb --swap</command>

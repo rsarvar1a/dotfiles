@@ -1,6 +1,6 @@
 #!/bin/bash
 
-STYLE="theme"
+STYLE="~/.config/rofi/$(cat ~/.config/rofi/theme)"
 
 rofi_command="rofi -theme $STYLE/mpd.rasi"
 
@@ -8,15 +8,15 @@ rofi_command="rofi -theme $STYLE/mpd.rasi"
 status="$(mpc status)"
 # Defines the Play / Pause option content
 if [[ $status == *"[playing]"* ]]; then
-  play_pause=""
+  play_pause=""
 else
-  play_pause=""
+  play_pause=""
 fi
 active=""
 urgent=""
 
 # Display if repeat mode is on / off
-tog_repeat=""
+tog_repeat=""
 if [[ $status == *"repeat: on"* ]]; then
     active="-a 5"
 elif [[ $status == *"repeat: off"* ]]; then
@@ -25,7 +25,7 @@ else
     tog_repeat=""
 fi
 
-tog_single=""
+tog_single=""
 if [[ $status == *"single: on"* ]]; then
     [ -n "$active" ] && active+=",6" || active="-a 6"
 elif [[ $status == *"single: off"* ]]; then
@@ -35,7 +35,7 @@ else
 fi
 
 # Display if random mode is on / off
-tog_random=""
+tog_random=""
 if [[ $status == *"random: on"* ]]; then
     [ -n "$active" ] && active+=",7" || active="-a 7"
 elif [[ $status == *"random: off"* ]]; then
@@ -44,10 +44,10 @@ else
     tog_random=""
 fi
 
-stop=""
-next=""
-rewind=""
-previous=""
+stop=""
+next=""
+rewind=""
+previous=""
 music=""
 
 # Variable passed to rofi
