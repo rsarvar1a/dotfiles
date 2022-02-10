@@ -1,6 +1,6 @@
 local Colours =
 {
-  scheme = "oceanic_material",
+  scheme = "catppuccin",
 
   fg1 = "#d0d0d4", 
   fg2 = "#e4e4e8",

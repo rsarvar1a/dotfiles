@@ -6,6 +6,11 @@ local properties = {
     filetypes = {},
     buftypes = {},
     bufnames = {}
+  },
+  disable = {
+    filetypes = {}, 
+    buftypes = {},
+    bufnames = {}
   }
 }
 
@@ -17,20 +22,20 @@ local components = {
 local colors = require("palette.lua")
 
 local vi_mode_colors = {
-  NORMAL = 'violet',
-  OP = 'green',
-  INSERT = 'red',
-  VISUAL = 'orange',
-  BLOCK = 'orange',
-  REPLACE = 'green',
-  ['V-REPLACE'] = 'green',
-  ENTER = 'indigo',
-  MORE = 'indigo',
-  SELECT = 'orange',
-  COMMAND = 'blue',
-  SHELL = 'green',
-  TERM = 'green',
-  NONE = 'yellow'
+  NORMAL = colors['hil1'],
+  OP = colors['green'],
+  INSERT = colors['red'],
+  VISUAL = colors['orange'],
+  BLOCK = colors['orange'],
+  REPLACE = colors['green'],
+  ['V-REPLACE'] = colors['green'],
+  ENTER = colors['indigo'],
+  MORE = colors['indigo'],
+  SELECT = colors['orange'],
+  COMMAND = colors['blue'],
+  SHELL = colors['green'],
+  TERM = colors['green'],
+  NONE = colors['yellow']
 }
 
 local vi_mode_text = {
@@ -53,7 +58,34 @@ properties.force_inactive.filetypes = {
   'startify',
   'fugitive',
   'fugitiveblame',
-  'vista_kind'
+  'vista_kind',
+  'SidebarNvim',
+  'Trouble'
+}
+
+properties.force_inactive.bufnames = { 
+  '^NvimTree$',
+  '^SidebarNvim$',
+  '^Trouble$',
+  'vista'
+}
+
+properties.disable.filetypes = {
+  'NvimTree',
+  'dbui',
+  'packer',
+  'startify',
+  'fugitive',
+  'fugitiveblame',
+  'vista_kind',
+  'SidebarNvim',
+  'Trouble'
+}
+
+properties.disable.bufnames = { 
+  '^NvimTree$',
+  '^SidebarNvim$',
+  '^Trouble$'
 }
 
 properties.force_inactive.buftypes = {
@@ -62,8 +94,8 @@ properties.force_inactive.buftypes = {
 
 local function sephl()
     local val = {}
-    val.fg = 'bg2'
-    val.bg = 'bg2'
+    val.fg = colors['bg3']
+    val.bg = colors['bg3']
     return val
 end
 
@@ -76,7 +108,7 @@ components.active[1][1] = {
     local val = {}
 
     val.bg = vi_mode_utils.get_mode_color()
-    val.fg = 'bg2'
+    val.fg = colors['bg3']
     val.style = 'bold'
 
     return val
@@ -95,7 +127,7 @@ components.active[1][2] = {
   hl = function()
     local val = {}
     val.fg = vi_mode_utils.get_mode_color()
-    val.bg = 'bg2'
+    val.bg = colors['bg3']
     val.style = 'bold'
     return val
   end,
@@ -125,7 +157,7 @@ components.active[1][3] = {
     else
       val.fg = 'fg1'
     end
-    val.bg = 'bg2'
+    val.bg = colors['bg3']
     val.style = 'bold'
     return val
   end,
@@ -142,7 +174,7 @@ components.active[1][4] = {
   end,
   hl = {
     fg = 'fg1',
-    bg = 'bg2',
+    bg = colors['bg3'],
     style = 'bold'
   },
   right_sep = 
@@ -151,53 +183,40 @@ components.active[1][4] = {
     hl = sephl(),
   }
 }
-components.active[1][5] = {
-  provider = 'file_size',
-  enabled = function() return vim.fn.getfsize(vim.fn.expand('%:t')) > 0 end,
-  hl = {
-    fg = 'blue',
-    bg = 'bg2',
-    style = 'bold'
-  },
-  right_sep = 
-  {
-    str = ' ',
-    hl = sephl(),
-  }
-}
+
 -- gitBranch
-components.active[1][6] = {
+components.active[1][5] = {
   provider = 'git_branch',
   hl = {
-    fg = 'violet',
-    bg = 'bg2',
+    fg = colors['violet'],
+    bg = colors['bg3'],
     style = 'bold'
   }
 }
 -- diffAdd
-components.active[1][7] = {
+components.active[1][6] = {
   provider = 'git_diff_added',
   hl = {
-    fg = 'green',
-    bg = 'bg2',
+    fg = colors['green'],
+    bg = colors['bg3'],
     style = 'bold'
   }
 }
 -- diffModfified
-components.active[1][8] = {
+components.active[1][7] = {
   provider = 'git_diff_changed',
   hl = {
-    fg = 'orange',
-    bg = 'bg2',
+    fg = colors['orange'],
+    bg = colors['bg3'],
     style = 'bold'
   }
 }
 -- diffRemove
-components.active[1][9] = {
+components.active[1][8] = {
   provider = 'git_diff_removed',
   hl = {
-    fg = 'red',
-    bg = 'bg2',
+    fg = colors['red'],
+    bg = colors['bg3'],
     style = 'bold'
   }
 }
@@ -210,8 +229,8 @@ components.active[2][1] = {
   enabled = function() return lsp.diagnostics_exist('Error') end,
   icon = " ",
   hl = {
-    fg = 'red',
-    bg = 'bg2',
+    fg = colors['error'],
+    bg = colors['bg3'],
     style = 'bold'
   },
   right_sep = 
@@ -223,11 +242,11 @@ components.active[2][1] = {
 -- diagnosticWarn
 components.active[2][2] = {
   provider = 'diagnostic_warnings',
-  enabled = function() return lsp.diagnostics_exist('Warning') end,
+  enabled = function() return lsp.diagnostics_exist('Warn') end,
   icon = ' ',
   hl = {
-    fg = 'yellow',
-    bg = 'bg2',
+    fg = colors['warn'],
+    bg = colors['bg3'],
     style = 'bold'
   },
   right_sep = 
@@ -242,8 +261,8 @@ components.active[2][3] = {
   enabled = function() return lsp.diagnostics_exist('Hint') end,
   icon = ' ',
   hl = {
-    fg = 'blue',
-    bg = 'bg2',
+    fg = colors['hint'],
+    bg = colors['bg3'],
     style = 'bold'
   },
   right_sep = 
@@ -255,11 +274,11 @@ components.active[2][3] = {
 -- diagnosticInfo
 components.active[2][4] = {
   provider = 'diagnostic_info',
-  enabled = function() return lsp.diagnostics_exist('Information') end,
+  enabled = function() return lsp.diagnostics_exist('Info') end,
   icon = ' ',
   hl = {
     fg = 'fg1',
-    bg = 'bg2',
+    bg = colors['bg3'],
     style = 'bold'
   },
   right_sep =
@@ -274,7 +293,7 @@ components.active[2][5] = {
   icon = '  ',
   hl = {
     fg = 'fg1',
-    bg = 'bg2',
+    bg = colors['bg3'],
     style = 'bold'
   },
   right_sep =
@@ -286,21 +305,52 @@ components.active[2][5] = {
 }
 
 
+-- file size
+components.active[2][6] = {
+  provider = 'file_size',
+  enabled = function() return vim.fn.getfsize(vim.fn.expand('%:t')) > 0 end,
+  hl = {
+    fg = colors['blue'],
+    bg = colors['bg3'],
+    style = 'bold'
+  },
+  right_sep = 
+  {
+    str = ' ',
+    hl = sephl(),
+  }
+}
+
+-- file position
+components.active[2][7] = {
+  provider = "position",
+  enabled = true,
+  hl = {
+    fg = colors['fg1'],
+    bg = colors['bg3']
+  },
+  right_sep = 
+  {
+    str = ' ',
+    hl = sephl(),
+  }
+}
+
 -- INACTIVE
 
 -- fileType
 components.inactive[1][1] = {
   provider = 'file_type',
   hl = {
-    fg = 'bg2',
-    bg = 'violet',
+    fg = colors['bg3'],
+    bg = colors['hil1'],
     style = 'bold'
   },
   left_sep = {
     str = ' ',
     hl = {
       fg = 'NONE',
-      bg = 'violet'
+      bg = colors['hil1']
     }
   },
   right_sep = {
@@ -308,14 +358,14 @@ components.inactive[1][1] = {
       str = ' ',
       hl = {
         fg = 'NONE',
-        bg = 'violet'
+        bg = colors['hil1']
       },
     },
     {
       str = ' ',
       hl = {
         fg = 'NONE',
-        bg = 'bg2'
+        bg = colors['bg3']
       },
     },
   }
@@ -325,7 +375,7 @@ components.inactive[1][2] = {
   provider = 'file_info', 
   hl = {
     fg = 'fg1',
-    bg = 'bg2',
+    bg = colors['bg3'],
     style = 'bold'
   },
   right_sep =
@@ -337,9 +387,10 @@ components.inactive[1][2] = {
 
 require('feline').setup({
   colors = colors,
-  default_bg = colors.bg2,
+  default_bg = colors.bg3,
   default_fg = colors.fg1,
   vi_mode_colors = vi_mode_colors,
   components = components,
-  properties = properties,
+  force_inactive = properties.force_inactive,
+  disable = properties.disable,
 })

@@ -7,12 +7,12 @@ require('compe.lua')
 require('hyperfocus.lua')
 require('lspconfig.lua')
 require('markdown.lua')
-require('nvimtree.lua')
+require('sidebar.lua')
 require('signs.lua')
 require('startify.lua')
 require('statusline.lua')
-require('tagbar.lua')
 require('treesitter.lua')
+require('trouble.lua')
 require('web-devicons.lua')
 
 -- Global config.
@@ -25,7 +25,7 @@ cmd "syntax enable"
 cmd "syntax on"
 cmd "set number"
 cmd "set cmdheight=1"
-cmd "set fillchars+=vert:\\|"
+cmd "set fillchars+=vert:\\│"
 cmd "set autochdir"
 cmd "set wildmenu"
 cmd "set signcolumn=yes:2"
@@ -97,6 +97,5 @@ vim.cmd [[ let hidden_statusline = luaeval('require("opts.lua").hidden_statuslin
 
 require('colorizer').setup()
 require('colours.lua')
-
 require('indentline.lua')
 

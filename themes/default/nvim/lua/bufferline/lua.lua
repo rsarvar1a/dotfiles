@@ -25,6 +25,8 @@ require "bufferline".setup {
     options = {
         offsets = {
           {filetype = "NvimTree", text = "", padding = 0},
+          {filetype = "SidebarNvim", text = "", padding = 0},
+          {filetype = "vista_kind", text = "", padding = 0}
         },
         numbers = 'ordinal',
         numbers_style = 'none',
@@ -34,7 +36,7 @@ require "bufferline".setup {
         right_trunc_marker = "",
         max_name_length = 20,
         max_prefix_length = 10,
-        tab_size = 30,
+        tab_size = 25,
         enforce_regular_tabs = false,
         view = "multiwindow",
         show_buffer_close_icons = true,
