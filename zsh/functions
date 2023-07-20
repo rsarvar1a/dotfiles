@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+
+function set_title {
+	echo -n -e "\033]0;in $PWD\007"
+}
+
+function lf { 
+	echo "" 
+}
+

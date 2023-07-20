@@ -1,0 +1,47 @@
+# Created by newuser for 5.9
+
+# aliases
+source ~/.config/zsh/aliases
+
+# colours
+source ~/.config/zsh/colours
+
+# functions
+source ~/.config/zsh/functions
+
+# zsh opts
+setopt autocd
+
+# kitty config
+export KITTY_CONF="$HOME/.config/kitty/kitty.conf"
+
+# starship.rs prompt
+export STARSHIP_CONFIG="$HOME/.config/starship/config.toml"
+eval $(starship init zsh)
+
+# reverse line searching
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^U" up-line-or-beginning-search
+bindkey "^D" down-line-or-beginning-search
+
+# line navigations
+bindkey "^b" backward-word
+bindkey "^f" forward-word
+
+# environments
+source ~/.config/zsh/python
+source ~/.config/zsh/rust
+
+# zsh execution hooks
+add-zsh-hook preexec lf
+add-zsh-hook precmd lf
+add-zsh-hook preexec set_title
+add-zsh-hook precmd set_title
+
+# load nvm
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

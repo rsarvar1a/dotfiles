@@ -1,0 +1,61 @@
+add_newline = false
+
+format = """$directory\
+$git_branch\
+$package\
+$character  
+"""
+
+right_format = """$cmd_duration"""
+
+continuation_prompt = '    ⟶  '
+
+[username]
+show_always = true
+style_user = "fg:#000000 bg:#90d0e0 bold"
+style_root = "fg:#000000 bg:#90d0e0 bold"
+format = ' [ $user ]($style)'
+disabled = false
+
+[directory]
+style = "fg:#000000 bg:#e0a0e0 bold"
+format = "[ $path ]($style)"
+disabled = false
+
+[directory.substitutions]
+"Documents" = "󱔗 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "fg:#000000 bg:#e07090 bold"
+format = ' [ $symbol $branch ]($style)'
+disabled = false
+
+[git_status]
+style = "fg:#000000 bg:#e07090"
+format = ' [ $all_status$ahead_behind ]($style)'
+disabled = false
+
+[package]
+symbol = " "
+style = "fg:#ffffff bg:#303038 bold"
+format = ' [ $symbol ($version) ]($style)'
+disabled = false
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "fg:#000000 bg:#a0f0a0 bold"
+format = ' [   $time ]($style)'
+
+[cmd_duration]
+style = "fg:#000000 bg:#90e0b0 bold"
+format = " [ took $duration ]($style)"
+
+[character]
+format = "  $symbol"
+success_symbol = '[✓](bold green)'
+error_symbol = '[](bold red)'

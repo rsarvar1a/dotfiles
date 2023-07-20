@@ -1,0 +1,52 @@
+clear
+ls
+clear
+exa
+clear
+l
+clear
+ls
+ls -l
+ls -la
+ls -TL 3
+ls --help
+ls -a | where type == dir
+clear
+l
+clear
+ls
+alias
+alias --help
+l
+clear
+starship init nu
+starship init nu | so
+starship init nu | source
+eval
+exec
+$(starship init nu)
+clear
+cd ~/.config/
+l
+clear
+ls
+cd .config/nushell/
+ls
+vim env.nu
+nvim env.nu
+clear
+mkdir ~/.cache/starship/
+starship init nu | save -f ~/.cache/starship/init.nu
+nvim env.nu
+source ~/.config/nushell/env.nu
+clear
+ls
+clear
+l
+clear
+sleep 2
+sleep 2s
+sleep --help
+sleep 2s
+sleep 2sec
+clear

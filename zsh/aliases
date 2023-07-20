@@ -1,0 +1,20 @@
+# aliases for exa
+alias ls='exa --group-directories-first'
+alias l='ls -l'
+alias ll='ls -la'
+alias la='ls -lagh'
+alias ltl='l -TL'
+alias lt='l -T'
+
+# aliases on navigation
+alias ..2='cd ../..'
+alias ..3='cd ../../..'
+alias ..4='cd ../../../..'
+alias ..5='cd ../../../../..'
+
+# aliases on programs
+alias ppr='pepper'
+alias vim='nvim'
+alias emacs='emacs -nw'
+alias rep='source ~/.zshrc'
+alias tmux='tmux -2'
