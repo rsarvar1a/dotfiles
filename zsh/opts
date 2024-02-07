@@ -1,0 +1,2 @@
+# zsh opts
+setopt autocd

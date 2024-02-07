@@ -1,0 +1,2 @@
+# kitty config
+export KITTY_CONF="$HOME/.config/kitty/kitty.conf"

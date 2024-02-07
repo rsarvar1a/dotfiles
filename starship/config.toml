@@ -22,12 +22,6 @@ style = "fg:#000000 bg:#e0a0e0 bold"
 format = "[ $path ]($style)"
 disabled = false
 
-[directory.substitutions]
-"Documents" = "󱔗 "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
-
 [git_branch]
 symbol = ""
 style = "fg:#000000 bg:#e07090 bold"

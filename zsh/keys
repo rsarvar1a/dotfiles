@@ -1,0 +1,20 @@
+
+key=(
+    BackSpace  "${terminfo[kbs]}"
+    Home       "${terminfo[khome]}"
+    End        "${terminfo[kend]}"
+    Insert     "${terminfo[kich1]}"
+    Delete     "${terminfo[kdch1]}"
+    Up         "${terminfo[kcuu1]}"
+    Down       "${terminfo[kcud1]}"
+    Left       "${terminfo[kcub1]}"
+    Right      "${terminfo[kcuf1]}"
+    PageUp     "${terminfo[kpp]}"
+    PageDown   "${terminfo[knp]}"
+)
+
+bindkey "^[[${key[Up]}" up-line-or-beginning-search
+bindkey "^[[${key[Down]}" down-line-or-beginning-search
+
+bindkey "^b" backward-word
+bindkey "^f" forward-word
