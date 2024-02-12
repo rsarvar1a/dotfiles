@@ -15,7 +15,7 @@ return {
 			lualine_c = { 'fileformat',
 				{'diff', symbols = {added = ' ', modified = '󰏬 ', removed = '󰍵 '}}
 			},
-			lualine_x = { 'navic' },
+			lualine_x = {},
 			lualine_y = { 'filetype', 'progress' },
 			lualine_z = { 'location' },
 		  },
