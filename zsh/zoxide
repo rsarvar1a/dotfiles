@@ -1,0 +1,3 @@
+eval "$(zoxide init zsh)"
+alias cd='z'
+alias c='z'

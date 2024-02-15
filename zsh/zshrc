@@ -7,6 +7,7 @@ source ~/.config/zsh/nvm
 source ~/.config/zsh/python
 source ~/.config/zsh/rust
 source ~/.config/zsh/starship
+source ~/.config/zsh/zoxide
 
 # config
 source ~/.config/zsh/aliases
