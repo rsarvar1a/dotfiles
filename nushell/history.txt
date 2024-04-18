@@ -50,3 +50,19 @@ sleep --help
 sleep 2s
 sleep 2sec
 clear
+l
+clear
+ls
+clear
+l
+clear
+ls
+v env.nu
+vim env.nu
+nvim env.nu
+l
+clear
+exit
+eval $(starship init nushell)
+clear
+exit

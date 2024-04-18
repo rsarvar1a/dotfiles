@@ -21,3 +21,8 @@ alias tmux='tmux -2'
 alias bp='bomb-party'
 
 alias charshuf="fold -w1 | shuf | tr -d '\n'"
+
+alias cd='z'
+alias c='z'
+
+alias v='nvim'

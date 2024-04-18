@@ -1,5 +1,4 @@
 # zsh execution hooks
-
 add-zsh-hook preexec lf
 add-zsh-hook precmd lf
 add-zsh-hook preexec set_title

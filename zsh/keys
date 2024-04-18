@@ -1,20 +1,26 @@
 
-key=(
-    BackSpace  "${terminfo[kbs]}"
-    Home       "${terminfo[khome]}"
-    End        "${terminfo[kend]}"
-    Insert     "${terminfo[kich1]}"
-    Delete     "${terminfo[kdch1]}"
-    Up         "${terminfo[kcuu1]}"
-    Down       "${terminfo[kcud1]}"
-    Left       "${terminfo[kcub1]}"
-    Right      "${terminfo[kcuf1]}"
-    PageUp     "${terminfo[kpp]}"
-    PageDown   "${terminfo[knp]}"
+typeset -A key
+export key=(
+    'BackSpace'  "${terminfo[kbs]}"
+    'Home'       "${terminfo[khome]}"
+    'End'        "${terminfo[kend]}"
+    'Insert'     "${terminfo[kich1]}"
+    'Delete'     "${terminfo[kdch1]}"
+    'Up'         "${terminfo[kcuu1]}"
+    'Down'       "${terminfo[kcud1]}"
+    'Left'       "${terminfo[kcub1]}"
+    'Right'      "${terminfo[kcuf1]}"
+    'PageUp'     "${terminfo[kpp]}"
+    'PageDown'   "${terminfo[knp]}"
 )
 
-bindkey "^[[${key[Up]}" up-line-or-beginning-search
-bindkey "^[[${key[Down]}" down-line-or-beginning-search
+# Make zsh autocomplete with up arrow
+autoload -Uz history-search-end 
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^[[A" history-beginning-search-backward-end
+bindkey "^[[B" history-beginning-search-forward-end
 
+# Move through prompt line
 bindkey "^b" backward-word
 bindkey "^f" forward-word

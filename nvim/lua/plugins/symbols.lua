@@ -8,7 +8,7 @@ return {
 	dependencies = "nvim-tree/nvim-web-devicons",
 	config = function ()
 		require('symbols-outline').setup({
-			width = 50,
+			width = 60,
 			relative_width = false,
 			position = 'right',
 			symbols = {
