@@ -4,6 +4,7 @@
 source ~/.config/zsh/flyctl
 source ~/.config/zsh/kitty
 source ~/.config/zsh/nvm
+source ~/.config/zsh/ocaml
 source ~/.config/zsh/python
 source ~/.config/zsh/rust
 source ~/.config/zsh/starship
