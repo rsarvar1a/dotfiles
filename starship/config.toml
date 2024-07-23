@@ -1,6 +1,6 @@
 add_newline = false
 
-format = """[╭──](fg:#808080) $time$username$hostname$directory$git_branch$package $c$cmake$elixir$golang$haskell$kotlin$lua$nodejs$ocaml$python$rlang$ruby$rust$scala$docker_context$aws[\n]()\
+format = """[╭──](fg:#808080) $time$username$hostname$directory$git_branch$package $c$cmake$elixir$golang$haskell$kotlin$lua$nodejs$ocaml$python$rlang$ruby$rust$scala$docker_context$aws$gcloud$kubernetes[\n]()\
 [╰──](fg:#808080)  $character"""
 continuation_prompt = """     ⟶  """
 
@@ -48,7 +48,7 @@ error_symbol = '[](bold red)'
 threshold = 105
 
 [fill]
-symbol = '  ──────  '
+symbol = ' ─── '
 style = 'fg:#303030'
 
 [aws]

@@ -8,3 +8,10 @@ function lf {
 	echo "" 
 }
 
+function gri {
+	git ri "HEAD~$1"
+}
+
+function gdsh {
+	git diff --stat "HEAD~$1" HEAD
+}

@@ -5,9 +5,9 @@
  		require('catppuccin').setup({
  			color_overrides = {
  				all = {
- 					base = "#07070f",
- 					mantle = "#080810",
- 					crust = "#090911"
+ 					base = "#121214",
+ 					mantle = "#141416",
+ 					crust = "#161618"
  				}
  			},
  			custom_highlights = function(colors)
