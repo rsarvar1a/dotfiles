@@ -1,6 +1,6 @@
 add_newline = false
 
-format = """[╭──](fg:#808080) $time$username$hostname$directory$git_branch$package $c$cmake$elixir$golang$haskell$kotlin$lua$nodejs$ocaml$python$rlang$ruby$rust$scala$docker_context$aws$gcloud$kubernetes[\n]()\
+format = """[╭──](fg:#808080) $time $username $directory $git_branch $fill $c$cmake$elixir$golang$haskell$kotlin$lua$nodejs$ocaml$python$rlang$ruby$rust$scala$docker_context$aws$gcloud$kubernetes$cmd_duration[\n]()\
 [╰──](fg:#808080)  $character"""
 continuation_prompt = """     ⟶  """
 
@@ -8,36 +8,36 @@ continuation_prompt = """     ⟶  """
 show_always = true
 style_user = "fg:#000000 bg:#cb2048 bold"
 style_root = "fg:#000000 bg:#cb2048 bold"
-format = '[](inverted fg:#cb2048)[ $user ]($style)[](fg:#cb2048)'
+format = '[ $user ]($style)'
 disabled = false
 
 [hostname]
 ssh_only = false
 style = "fg:#000000 bg:#cf4676 bold"
-format = '[](inverted fg:#cf4676)[ $hostname ]($style)[](fg:#cf4676)'
+format = '[ $hostname ]($style)'
 
 [directory]
 style = "fg:#000000 bg:#cb689c bold"
-format = "[](inverted fg:#cb689c)[ $path ]($style)[](fg:#cb689c)"
+format = "[ $path ]($style)"
 disabled = false
 
 [git_branch]
 symbol = ""
 style = "fg:#000000 bg:#c386b6 bold"
-format = '[](inverted fg:#cd86b6)[ $symbol $branch ]($style)[](fg:#cd86b6)'
+format = '[ $symbol $branch ]($style)'
 disabled = false
 
 [package]
 symbol = " "
 style = "fg:#000000 bg:#bca0c5 bold"
-format = '[](inverted fg:#bca0c5)[ $symbol ($version) ]($style)[](fg:#bca0c5)'
+format = '[ $symbol ($version) ]($style)'
 disabled = false
 
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "fg:#bca0c5 bold"
-format = '[   $time ]($style) '
+format = '[   $time ]($style)'
 
 [character]
 format = "$symbol  "
@@ -48,7 +48,7 @@ error_symbol = '[](bold red)'
 threshold = 105
 
 [fill]
-symbol = ' ─── '
+symbol = '──'
 style = 'fg:#303030'
 
 [aws]

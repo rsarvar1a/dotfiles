@@ -5,9 +5,9 @@
  		require('catppuccin').setup({
  			color_overrides = {
  				all = {
- 					base = "#121214",
- 					mantle = "#141416",
- 					crust = "#161618"
+ 					base = "#121417",
+ 					mantle = "#1a1c1f",
+ 					crust = "#222427"
  				}
  			},
  			custom_highlights = function(colors)
@@ -20,7 +20,7 @@
  			integrations = {
  				symbols_outline = true,
 				treesitter = true,
- 				navic = { enabled = true, custom_bg = "#11111b" }
+ 				navic = { enabled = true, custom_bg = "#121417" }
  			}
  		})
  	end
