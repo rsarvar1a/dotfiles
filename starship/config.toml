@@ -1,6 +1,6 @@
 add_newline = false
 
-format = """[╭──](fg:#808080) $time $username $directory $git_branch $fill $c$cmake$elixir$golang$haskell$kotlin$lua$nodejs$ocaml$python$rlang$ruby$rust$scala$docker_context$aws$gcloud$kubernetes$cmd_duration[\n]()\
+format = """[╭──](fg:#808080) $time $username $directory $git_branch  $fill $c$cmake$elixir$golang$haskell$kotlin$lua$nodejs$ocaml$python$rlang$ruby$rust$scala$docker_context$aws$gcloud$kubernetes$cmd_duration[\n]()\
 [╰──](fg:#808080)  $character"""
 continuation_prompt = """     ⟶  """
 
