@@ -38,8 +38,12 @@ alias gw='git switch'
 alias gaa='git add --all'
 alias gcm='git commit -m'
 alias gds='git diff --stat'
+alias ghu='git push --set-upstream'
 alias gpd='git pull origin develop'
 alias gra='git rebase --abort'
 alias grc='git rebase --continue'
 alias gsd='git switch develop'
 alias gtl='git log --oneline --graph --decorate'
+
+alias gho+='git push origin +$(git branch --show-current)'
+
