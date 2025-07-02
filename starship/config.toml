@@ -58,7 +58,7 @@ style = 'bold blue'
 
 [python]
 symbol = "  "
-format = ' [using](italic) [${symbol}${pyenv_prefix}(${version})( \($virtualenv\))]($style) '
+format = ' [using](italic) [${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style) '
 style = 'yellow bold'
 
 [rust]

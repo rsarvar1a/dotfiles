@@ -21,3 +21,5 @@ source ~/.config/zsh/hooks
 source ~/.config/zsh/keys
 source ~/.config/zsh/opts
 
+# extra
+source ~/.config/zsh/federato

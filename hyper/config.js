@@ -8,9 +8,9 @@ module.exports = {
         // or `'canary'` for less polished but more frequent updates
         updateChannel: 'stable',
         // default font size in pixels for all tabs
-        fontSize: 12,
+        fontSize: 14,
         // font family with optional fallbacks
-        fontFamily: '"VictorMono NFP Medium", "VictorMono NFM Medium", "Source Code Pro"',
+        fontFamily: '"VictorMono NFP Medium", "VictorMono NFM Medium", "Source Code Pro", "Menlo"',
         // default font weight: 'normal' or 'bold'
         fontWeight: 'normal',
         // font weight for bold characters: 'normal' or 'bold'
@@ -92,11 +92,11 @@ module.exports = {
         //
         // Cygwin
         // - Example: `C:\\cygwin64\\bin\\bash.exe`
-        shell: 'C:\\Windows\\System32\\wsl.exe',
+        // shell: 'C:\\Windows\\System32\\wsl.exe',
         // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
         // by default `['--login']` will be used
         // for environment variables
-	shellArgs: ['~'],
+	// shellArgs: ['~'],
         env: {},
         // Supported Options:
         //  1. 'SOUND' -> Enables the bell as a sound
