@@ -9,9 +9,13 @@ function lf {
 }
 
 function gri {
-	git ri "HEAD~$1"
+	git rebase --interactive "HEAD~$1"
 }
 
 function gdsh {
 	git diff --stat "HEAD~$1" HEAD
+}
+
+function git-revert-file {
+	git show $1 -- $2 | git apply -R
 }
